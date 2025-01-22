@@ -21,7 +21,7 @@ const RegisterPage = () => {
 
   return (
     <div className={styles.container}>
-      <Flex gap={20}>
+      <Flex gap={20} wrap justify="center">
         <div className={styles.wrapper}>
           <h1>New Car Registration</h1>
           <Form className={styles.list} onFinish={handleRegister}>

@@ -20,8 +20,6 @@ const QueueItem: React.FC<QueueItemProps> = ({ queueVehicle, registeredVehicle }
   const { setVehicles, vehicles } = useContext(AppContext);
   const id = queueVehicle ? queueVehicle.plate : registeredVehicle?.id;
 
-  console.log(vehicles);
-
   const isUserQueue = vehicles.some((vehicle: VehicleProps) => vehicle.id === id);
 
   const [removeVehicleFromQueue, isLoading] = useAsyncFn(async () => {

@@ -1,7 +1,15 @@
+@use 'src/styles/mixins';
+
 .chargers {
   margin: 20px auto;
   width: 95%;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* see notes below */
+  max-width: 1400px;
+  display: flex;
+  justify-content: space-between;
+
   gap: 20px;
+
+  @include mixins.tablet {
+    flex-wrap: wrap;
+  }
 }
