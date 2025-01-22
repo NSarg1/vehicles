@@ -3,7 +3,7 @@ import { useQuery, useQueryClient, UseQueryResult } from '@tanstack/react-query'
 import { Card } from 'antd';
 import { Empty } from 'antd';
 import { produce } from 'immer';
-import QueueItem from 'src/components/QueueItem/QueueItem';
+import QueueItem from 'src/components/queue-item/QueueItem';
 import WrapperLoader from 'src/components/wrapper-loader/WrapperLoader';
 import socket from 'src/configs/socket.config';
 import { vehiclesApi } from 'src/service/vehicles.api';

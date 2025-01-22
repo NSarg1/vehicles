@@ -5,7 +5,7 @@ import { AppContext } from 'src/app/App.context';
 
 import styles from './register.module.scss';
 
-import QueueItem from '../../components/QueueItem/QueueItem';
+import QueueItem from '../../components/queue-item/QueueItem';
 import { VehicleProps } from '../chargers/components/Charger/components/VehicleForm/vehicleForm.utils';
 
 const RegisterPage = () => {
