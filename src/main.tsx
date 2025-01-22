@@ -1,6 +1,6 @@
 import { createRoot } from 'react-dom/client';
 import { Toaster } from 'react-hot-toast';
-import { HashRouter } from 'react-router-dom'; // Use HashRouter instead of BrowserRouter
+import { HashRouter } from 'react-router'; // Use HashRouter instead of BrowserRouter
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ConfigProvider } from 'antd';
 
