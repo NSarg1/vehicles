@@ -1,0 +1,33 @@
+@use 'src/styles/mixins';
+
+.form {
+  display: flex;
+  gap: 10px;
+
+  .select {
+    margin: 0;
+
+    @include mixins.mobile {
+      :global(.ant-select-single) {
+        height: 38px;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .btn {
+    @include mixins.mobile {
+      height: 100%;
+    }
+  }
+
+  & > :first-child {
+    flex: 1;
+  }
+}
+
+.select-popup {
+  :global(.ant-select-item-option) {
+    font-size: 0.9rem;
+  }
+}

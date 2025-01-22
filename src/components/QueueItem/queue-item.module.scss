@@ -1,0 +1,30 @@
+@use 'src/styles/mixins';
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: #a6cdc6;
+
+  @include mixins.mobile {
+    font-size: 1rem;
+  }
+
+  .btn {
+    height: 30px;
+    .icon {
+      color: rgb(255, 135, 135);
+      @include mixins.mobile {
+        font-size: 1rem;
+      }
+    }
+
+    &:hover {
+      .icon {
+        color: rgb(255, 28, 28);
+      }
+    }
+  }
+}

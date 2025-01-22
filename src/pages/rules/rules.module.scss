@@ -1,0 +1,20 @@
+@use 'src/styles/mixins';
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  margin: auto;
+
+  .title {
+    text-align: center;
+  }
+
+  .rules {
+    margin-top: 2rem;
+    font-size: 1rem;
+    line-height: 1.4;
+    font-weight: 400;
+    list-style: outside;
+  }
+}

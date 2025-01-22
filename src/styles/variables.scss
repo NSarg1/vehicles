@@ -1,0 +1,13 @@
+@use 'sass:map';
+$transition_timing: 0.2s ease;
+
+$media: (
+  mobile: 600px,
+  tablet: 992px,
+  desktop: 1200px,
+  desktopLg: 1440px,
+);
+
+$color-1: #16404d;
+
+$color-light-1: #fbf5dd;

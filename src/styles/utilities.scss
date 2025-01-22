@@ -1,0 +1,53 @@
+@use 'src/styles/mixins';
+
+@for $index from 1 through 100 {
+  .u-m--#{$index} {
+    margin: $index + px;
+  }
+  .u-mt--#{$index} {
+    margin-top: $index + px;
+  }
+  .u-mr--#{$index} {
+    margin-right: $index + px;
+  }
+  .u-ml--#{$index} {
+    margin-left: $index + px;
+  }
+  .u-mb--#{$index} {
+    margin-bottom: $index + px;
+  }
+  .u-p--#{$index} {
+    padding: $index + px;
+  }
+  .u-pl--#{$index} {
+    padding-left: $index + px;
+  }
+  .u-pr--#{$index} {
+    padding-right: $index + px;
+  }
+  .u-pt--#{$index} {
+    padding-top: $index + px;
+  }
+  .u-pb--#{$index} {
+    padding-bottom: $index + px;
+  }
+  .u-size--#{$index} {
+    font-size: $index + px;
+  }
+  .u-gap--#{$index} {
+    gap: $index + px;
+  }
+  .u-gap-col--#{$index} {
+    gap: 0 $index + px;
+  }
+}
+
+@for $index from 1 through 9 {
+  .u-weight--#{$index} {
+    font-weight: #{$index}00;
+  }
+}
+
+.u-pointer {
+  cursor: pointer;
+}

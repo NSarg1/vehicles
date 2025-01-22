@@ -1,0 +1,44 @@
+@use 'src/styles/variables' as *;
+@use 'src/styles/mixins';
+
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 50px 0;
+
+  @include mixins.mobile {
+    padding: 20px 0;
+  }
+
+  .wrapper {
+    height: 1 1;
+    width: 270px;
+    padding: 20px 30px;
+    background-color: $color-light-1;
+    border-radius: 4px;
+
+    h1 {
+      text-align: center;
+    }
+    .list {
+      margin-top: 30px;
+
+      .main {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .bottom {
+        margin-top: 20px;
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+      }
+    }
+  }
+}

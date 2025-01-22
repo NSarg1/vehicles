@@ -1,0 +1,12 @@
+@use 'src/styles/mixins';
+@use 'src/styles/variables' as *;
+
+.container {
+  flex: 1;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: $color-light-1;
+  border-radius: 4px;
+  padding: 30px 40px;
+}

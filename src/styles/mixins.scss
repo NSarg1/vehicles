@@ -1,0 +1,34 @@
+@use 'sass:map';
+@use './variables';
+
+@mixin media($breakpoint) {
+  @media only screen and (max-width: ($breakpoint)) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media only screen and (max-width: map.get(variables.$media, 'mobile')) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media only screen and (max-width: map.get(variables.$media, 'tablet')) {
+    @content;
+  }
+}
+@mixin tabletPortrait {
+  @media only screen and (max-width: map.get(variables.$media, 'desktop')) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media only screen and (max-width: map.get(variables.$media, 'desktopLg')) {
+    @content;
+  }
+}
+@mixin desktop-only {
+  @media only screen and (min-width: map.get(variables.$media, 'mobile')) {
+    @content;
+  }
+}
