@@ -13,7 +13,7 @@ import 'src/styles/index.scss';
 // Create a client
 const queryClient = new QueryClient({
   defaultOptions: {
-    queries: { refetchOnWindowFocus: false, retry: 0 },
+    queries: { retry: 1 },
   },
 });
 
