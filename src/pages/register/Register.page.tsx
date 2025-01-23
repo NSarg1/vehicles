@@ -15,7 +15,7 @@ const RegisterPage = () => {
   const handleRegister = (values: VehicleProps) => {
     setVehicles((prev: VehicleProps[]) => [
       ...prev,
-      { ...values, id: `${values.plate} / ${values.name} / ${values.model} / ${values.telephone}` },
+      { ...values, id: `${values.plate} / ${values.telephone} / ${values.model} / ${values.name}` },
     ]);
     navigate('/');
   };
@@ -27,16 +27,10 @@ const RegisterPage = () => {
           <h1>New Car Registration</h1>
           <Form className={styles.list} onFinish={handleRegister}>
             <div className={styles.main}>
-              <Form.Item
-                name="name"
-                rules={[{ required: true, message: 'Please enter the name!' }]}
-              >
+              <Form.Item name="name" rules={[{ required: true, message: 'Please enter the name!' }]}>
                 <Input placeholder="Name" />
               </Form.Item>
-              <Form.Item
-                name="plate"
-                rules={[{ required: true, message: 'Please enter the plate number!' }]}
-              >
+              <Form.Item name="plate" rules={[{ required: true, message: 'Please enter the plate number!' }]}>
                 <Input placeholder="Plate number" />
               </Form.Item>
               <Form.Item
@@ -45,11 +39,8 @@ const RegisterPage = () => {
               >
                 <Input placeholder="Telegram ID / Telephone" />
               </Form.Item>
-              <Form.Item
-                name="model"
-                rules={[{ required: true, message: 'Please enter the vehicle type!' }]}
-              >
-                <Input placeholder="Vehicle type" />
+              <Form.Item name="model" rules={[{ required: true, message: 'Please enter the vehicle type!' }]}>
+                <Input placeholder="Vehicle model" />
               </Form.Item>
             </div>
             <div className={styles.bottom}>

@@ -7,13 +7,19 @@
   padding: 8px;
   border-radius: 4px;
   background-color: #a6cdc6;
+  min-height: 30px;
+  font-size: 0.9rem;
 
   @include mixins.mobile {
     font-size: 1rem;
   }
 
   .btn {
-    height: 30px;
+    &:disabled {
+      .icon {
+        color: rgba(79, 79, 79, 0.387);
+      }
+    }
     .icon {
       color: rgb(255, 135, 135);
       @include mixins.mobile {
@@ -21,7 +27,7 @@
       }
     }
 
-    &:hover {
+    &:nor(:disabled):hover {
       .icon {
         color: rgb(255, 28, 28);
       }

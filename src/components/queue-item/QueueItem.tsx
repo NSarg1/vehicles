@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import toast from 'react-hot-toast';
 import { DeleteFilled } from '@ant-design/icons';
-import { Button, Space, Spin } from 'antd';
+import { Button, Space, Spin, Tooltip } from 'antd';
 import dayjs from 'dayjs';
 import { AppContext, VehicleProps } from 'src/app/App.context';
 import useAsyncFn from 'src/hooks/useAsyncFn.hook';
@@ -42,17 +42,18 @@ const QueueItem: React.FC<QueueItemProps> = ({ queueVehicle, registeredVehicle }
       <span>{queueVehicle ? queueVehicle?.plate : registeredVehicle?.id}</span>
       <Space align="center">
         {queueVehicle && <span>{dayjs(queueVehicle.registerTime).format('HH:mm')}</span>}
-        {isUserQueue && (
+        <Tooltip title={!isUserQueue && 'You can delete only your vehicles.'}>
           <Button
             type="text"
             danger
             onClick={queueVehicle ? removeVehicleFromQueue : removeRegisteredVehicle}
             size="small"
             className={styles.btn}
+            disabled={!isUserQueue}
           >
             {!isLoading ? <DeleteFilled className={styles.icon} /> : <Spin size="small" />}
           </Button>
-        )}
+        </Tooltip>
       </Space>
     </li>
   );
